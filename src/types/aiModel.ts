@@ -29,6 +29,10 @@ export interface ModelAbilities {
    */
   functionCall?: boolean;
   /**
+   * whether model supports image output
+   */
+  imageOutput?: boolean;
+  /**
    * whether model supports reasoning
    */
   reasoning?: boolean;
@@ -36,7 +40,6 @@ export interface ModelAbilities {
    * whether model supports search web
    */
   search?: boolean;
-
   /**
    *  whether model supports vision
    */
@@ -128,7 +131,7 @@ export interface AIBaseModelCard {
 
 export interface AiModelConfig {
   /**
-   * used in azure and doubao
+   * used in azure and volcengine
    */
   deploymentName?: string;
 
@@ -140,7 +143,11 @@ export interface AiModelConfig {
 
 export type ModelSearchImplementType = 'tool' | 'params' | 'internal';
 
-export type ExtendParamsType = 'reasoningBudgetToken' | 'enableReasoning' | 'disableContextCaching';
+export type ExtendParamsType =
+  | 'reasoningBudgetToken'
+  | 'enableReasoning'
+  | 'disableContextCaching'
+  | 'reasoningEffort';
 
 export interface AiModelSettings {
   extendParams?: ExtendParamsType[];
@@ -238,7 +245,7 @@ export interface AIRealtimeModelCard extends AIBaseModelCard {
     vision?: boolean;
   };
   /**
-   * used in azure and doubao
+   * used in azure and volcengine
    */
   deploymentName?: string;
   maxOutput?: number;
