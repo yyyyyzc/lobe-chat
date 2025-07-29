@@ -1,6 +1,34 @@
 [
   {
     "children": {
+      "improvements": ["Support more Text2Image from Qwen."]
+    },
+    "date": "2025-07-29",
+    "version": "1.105.1"
+  },
+  {
+    "children": {
+      "features": ["Implement API Key management functionality."]
+    },
+    "date": "2025-07-28",
+    "version": "1.105.0"
+  },
+  {
+    "children": {
+      "improvements": ["Fix setting window layout when in desktop was disappear."]
+    },
+    "date": "2025-07-28",
+    "version": "1.104.5"
+  },
+  {
+    "children": {
+      "improvements": ["Fix setting window layout size, update i18n."]
+    },
+    "date": "2025-07-28",
+    "version": "1.104.4"
+  },
+  {
+    "children": {
       "improvements": ["Add Gemini 2.5 Flash-Lite GA model."]
     },
     "date": "2025-07-26",
