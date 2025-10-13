@@ -6,7 +6,7 @@ import {
   HotkeyItem,
   HotkeyScopeEnum,
   KeyEnum,
-} from '@/types/hotkey';
+} from '@lobechat/types';
 
 const combineKeys = (keys: string[]) => keys.join('+');
 
@@ -69,6 +69,18 @@ export const HOTKEYS_REGISTRATION: HotkeyRegistration = [
     group: HotkeyGroupEnum.Conversation,
     id: HotkeyEnum.RegenerateMessage,
     keys: combineKeys([KeyEnum.Alt, 'r']),
+    scopes: [HotkeyScopeEnum.Chat],
+  },
+  {
+    group: HotkeyGroupEnum.Conversation,
+    id: HotkeyEnum.DeleteLastMessage,
+    keys: combineKeys([KeyEnum.Alt, 'd']),
+    scopes: [HotkeyScopeEnum.Chat],
+  },
+  {
+    group: HotkeyGroupEnum.Conversation,
+    id: HotkeyEnum.DeleteAndRegenerateMessage,
+    keys: combineKeys([KeyEnum.Alt, KeyEnum.Shift, 'r']),
     scopes: [HotkeyScopeEnum.Chat],
   },
   {
